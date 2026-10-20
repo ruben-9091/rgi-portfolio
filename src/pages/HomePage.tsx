@@ -1,8 +1,9 @@
 import { Section } from '../components/Section/Section'
-import { experience } from '../data/experience'
 import { profile } from '../data/profile'
 import { projects } from '../data/projects'
 import { skillGroups } from '../data/skills'
+import { About } from '../sections/About/About'
+import { Experience } from '../sections/Experience/Experience'
 import { Hero } from '../sections/Hero/Hero'
 import styles from './HomePage.module.css'
 
@@ -16,35 +17,9 @@ export function HomePage() {
     <>
       <Hero />
 
-      <Section
-        id="sobre-mi"
-        eyebrow="Sobre mí"
-        title="Del retail al código, sin borrar el camino"
-        lead={profile.intro}
-      />
+      <About />
 
-      <Section
-        id="experiencia"
-        eyebrow="Experiencia"
-        title="Once años de retail y una formación full-stack"
-        tone="muted"
-      >
-        <ul className={styles.list}>
-          {experience.map((item) => (
-            <li key={item.id} className={styles.item}>
-              <div className={styles.itemHead}>
-                <h3 className={styles.itemTitle}>
-                  {item.role} · {item.organisation}
-                </h3>
-                <p className={styles.itemPeriod}>
-                  {item.kind} · {item.period}
-                </p>
-              </div>
-              <p className={styles.itemText}>{item.summary}</p>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      <Experience />
 
       <Section
         id="proyectos"

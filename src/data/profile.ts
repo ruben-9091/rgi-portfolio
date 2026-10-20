@@ -9,8 +9,6 @@ export const profile: Profile = {
   location: 'Alicante, España',
   tagline:
     'Vengo del retail, donde aprendí a escuchar, vender y coordinar equipos. Ahora construyo interfaces con React y TypeScript.',
-  intro:
-    'Once años en El Corte Inglés me enseñaron cómo funciona un equipo cuando hay prisa, cómo se atiende a alguien que no sabe lo que busca y cómo se sostienen las ventas mes a mes. Ahora quiero llevar esa misma cabeza a los productos digitales, con React como herramienta principal.',
   availability: 'Abierto a puestos Front-End y a un contrato en prácticas full-stack.',
   email: 'ruben_9091@hotmail.com',
   github: 'https://github.com/ruben-9091',

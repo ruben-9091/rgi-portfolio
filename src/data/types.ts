@@ -23,8 +23,6 @@ export type Profile = {
   location: string
   /** Frase corta que resume el perfil */
   tagline: string
-  /** Texto de presentación, en primera persona */
-  intro: string
   availability: string
   email: string
   github: string
@@ -35,14 +33,19 @@ export type Profile = {
   }
 }
 
+export type AboutContent = {
+  title: string
+  paragraphs: string[]
+}
+
 export type ExperienceKind = 'Trabajo' | 'Formación'
 
 export type ExperienceItem = {
   id: string
   role: string
   organisation: string
-  /** Periodo visible en la línea de tiempo */
-  period: string
+  /** Periodo visible en la línea de tiempo. Omitir si no aplica. */
+  period?: string
   kind: ExperienceKind
   summary: string
   highlights: string[]

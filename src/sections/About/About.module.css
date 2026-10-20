@@ -1,0 +1,12 @@
+.prose {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 62ch;
+  color: var(--color-ink-soft);
+}
+
+.prose p:first-child {
+  color: var(--color-ink);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+}

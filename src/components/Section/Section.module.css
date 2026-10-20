@@ -8,11 +8,15 @@
   border-block: 1px solid var(--color-border);
 }
 
+.inner {
+  display: grid;
+  gap: var(--space-6);
+}
+
 .heading {
   display: grid;
   gap: var(--space-3);
   max-width: var(--container-narrow);
-  margin-bottom: var(--space-6);
 }
 
 .eyebrow {
@@ -31,4 +35,13 @@
   color: var(--color-ink-soft);
   font-size: var(--text-lg);
   line-height: var(--leading-snug);
+}
+
+/* En escritorio, el título ocupa la columna izquierda y el contenido la derecha. */
+@media (min-width: 60rem) {
+  .split {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
 }
