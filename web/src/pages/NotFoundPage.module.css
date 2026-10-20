@@ -1,0 +1,34 @@
+.page {
+  display: grid;
+  align-content: center;
+  min-height: 60vh;
+  padding-block: var(--section-y);
+}
+
+.inner {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-4);
+  max-width: var(--container-narrow);
+}
+
+.eyebrow {
+  color: var(--color-accent-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.text {
+  color: var(--color-ink-soft);
+}
+
+.link {
+  color: var(--color-accent-strong);
+  font-weight: 600;
+}
