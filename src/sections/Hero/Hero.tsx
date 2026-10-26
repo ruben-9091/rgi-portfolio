@@ -24,6 +24,9 @@ export function Hero() {
           </p>
           <div className={styles.actions}>
             <Button href="#proyectos">Ver proyectos</Button>
+            <Button href={profile.cv} variant="secondary" download>
+              Descargar CV
+            </Button>
             <Button href="#contacto" variant="secondary">
               Hablemos
             </Button>

@@ -16,6 +16,13 @@ export type PhotoSource = {
   width: number
 }
 
+export type ImageAsset = {
+  src: string
+  width: number
+  height: number
+  alt: string
+}
+
 export type Profile = {
   name: string
   shortName: string
@@ -27,6 +34,8 @@ export type Profile = {
   email: string
   github: string
   linkedin: string
+  /** Ruta pública del CV en PDF */
+  cv: string
   photo: {
     alt: string
     sources: PhotoSource[]
@@ -59,7 +68,11 @@ export type Project = {
   description: string
   role: string
   stack: string[]
+  /** Qué hice yo en el proyecto */
   highlights: string[]
+  /** Qué aprendí con él */
+  learnings: string[]
+  image: ImageAsset
   /** Opcionales: si no existen, el enlace no se pinta */
   repo?: string
   demo?: string

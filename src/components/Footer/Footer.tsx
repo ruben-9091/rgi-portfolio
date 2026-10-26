@@ -40,6 +40,11 @@ export function Footer() {
               LinkedIn
             </a>
           </li>
+          <li>
+            <a className={styles.link} href={profile.cv} download>
+              CV
+            </a>
+          </li>
         </ul>
 
         <p className={styles.note}>

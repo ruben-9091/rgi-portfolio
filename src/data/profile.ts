@@ -13,6 +13,7 @@ export const profile: Profile = {
   email: 'ruben_9091@hotmail.com',
   github: 'https://github.com/ruben-9091',
   linkedin: 'https://www.linkedin.com/in/ruben-gomez-dev',
+  cv: '/cv/ruben-gomez-cv.pdf',
   photo: {
     alt: 'Retrato de Ruben Gómez Ibáñez',
     sources: [

@@ -1,0 +1,139 @@
+.page {
+  padding-block: clamp(2rem, 5vw, 4rem) var(--section-y);
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: var(--space-5);
+  color: var(--color-accent-strong);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.header {
+  display: grid;
+  gap: var(--space-3);
+  max-width: var(--container-narrow);
+}
+
+.eyebrow {
+  color: var(--color-accent-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: var(--text-3xl);
+}
+
+.tagline {
+  color: var(--color-ink-soft);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-muted);
+  color: var(--color-ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-top: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-muted);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 70ch;
+  margin-top: var(--space-7);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.blockTitle {
+  font-size: var(--text-xl);
+}
+
+.text {
+  color: var(--color-ink-soft);
+  font-size: var(--text-lg);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: 1.1rem;
+  color: var(--color-ink-soft);
+}
+
+.list li::marker {
+  color: var(--color-accent);
+}
+
+.more {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.moreTitle {
+  font-size: var(--text-lg);
+}
+
+.moreList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.moreList a {
+  color: var(--color-accent-strong);
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.moreList a:hover {
+  text-decoration: underline;
+}
