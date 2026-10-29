@@ -1,7 +1,15 @@
 import glucofitCover from '../assets/projects/glucofit.webp'
+import glucofit480 from '../assets/projects/glucofit-480.webp'
+import glucofit800 from '../assets/projects/glucofit-800.webp'
 import ironheroesCover from '../assets/projects/ironheroes.webp'
+import ironheroes480 from '../assets/projects/ironheroes-480.webp'
+import ironheroes800 from '../assets/projects/ironheroes-800.webp'
 import reactAssembleCover from '../assets/projects/react-assemble.webp'
+import reactAssemble480 from '../assets/projects/react-assemble-480.webp'
+import reactAssemble800 from '../assets/projects/react-assemble-800.webp'
 import spainFighterCover from '../assets/projects/spain-fighter.webp'
+import spainFighter480 from '../assets/projects/spain-fighter-480.webp'
+import spainFighter800 from '../assets/projects/spain-fighter-800.webp'
 import type { Project } from './types'
 
 /**
@@ -46,6 +54,11 @@ export const projects: Project[] = [
       src: glucofitCover,
       width: 1200,
       height: 675,
+      sources: [
+        { src: glucofit480, width: 480 },
+        { src: glucofit800, width: 800 },
+        { src: glucofitCover, width: 1200 },
+      ],
       alt: 'Móvil con la pantalla de GlucoFit mostrando el gráfico de glucosa de los últimos días.',
     },
     repo: 'https://github.com/ruben-9091/GlucoFit',
@@ -73,6 +86,11 @@ export const projects: Project[] = [
       src: reactAssembleCover,
       width: 1200,
       height: 675,
+      sources: [
+        { src: reactAssemble480, width: 480 },
+        { src: reactAssemble800, width: 800 },
+        { src: reactAssembleCover, width: 1200 },
+      ],
       alt: 'Portada de React Assemble, proyecto de grupo sobre Marvel.',
     },
   },
@@ -98,6 +116,11 @@ export const projects: Project[] = [
       src: ironheroesCover,
       width: 1200,
       height: 675,
+      sources: [
+        { src: ironheroes480, width: 480 },
+        { src: ironheroes800, width: 800 },
+        { src: ironheroesCover, width: 1200 },
+      ],
       alt: 'Portada de IronHeroes, proyecto en pareja con React Router y MSW.',
     },
   },
@@ -123,6 +146,11 @@ export const projects: Project[] = [
       src: spainFighterCover,
       width: 1200,
       height: 675,
+      sources: [
+        { src: spainFighter480, width: 480 },
+        { src: spainFighter800, width: 800 },
+        { src: spainFighterCover, width: 1200 },
+      ],
       alt: 'Portada de Spain Fighter con el logotipo del juego sobre fondo arcade.',
     },
     repo: 'https://github.com/ruben-9091/Project-js-streetfighter',

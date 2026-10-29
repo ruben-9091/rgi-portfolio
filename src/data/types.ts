@@ -14,12 +14,21 @@ export type NavItem = {
 export type PhotoSource = {
   src: string
   width: number
+  height: number
+}
+
+export type ImageSource = {
+  src: string
+  width: number
 }
 
 export type ImageAsset = {
+  /** Fallback y variante mayor; el navegador elegirá de `sources` */
   src: string
   width: number
   height: number
+  /** Variantes para srcSet, ordenadas de menor a mayor */
+  sources: ImageSource[]
   alt: string
 }
 

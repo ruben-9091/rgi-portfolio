@@ -41,7 +41,7 @@ export function Hero() {
             sizes="(min-width: 56rem) 34rem, 90vw"
             alt={profile.photo.alt}
             width={largest.width}
-            height={750}
+            height={largest.height}
             fetchPriority="high"
             decoding="async"
           />

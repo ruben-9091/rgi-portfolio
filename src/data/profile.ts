@@ -17,8 +17,8 @@ export const profile: Profile = {
   photo: {
     alt: 'Retrato de Ruben Gómez Ibáñez',
     sources: [
-      { src: rgi820, width: 820 },
-      { src: rgi1026, width: 1026 },
+      { src: rgi820, width: 820, height: 599 },
+      { src: rgi1026, width: 1026, height: 750 },
     ],
   },
 }

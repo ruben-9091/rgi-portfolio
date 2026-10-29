@@ -9,6 +9,9 @@ type ProjectCardProps = {
 export function ProjectCard({ project }: ProjectCardProps) {
   const { slug, name, tagline, role, stack, image, repo, demo } = project
   const projectPath = `/proyectos/${slug}`
+  const srcSet = image.sources
+    .map((source) => `${source.src} ${source.width}w`)
+    .join(', ')
 
   return (
     <article className={styles.card}>
@@ -21,6 +24,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <img
           className={styles.image}
           src={image.src}
+          srcSet={srcSet}
+          sizes="(min-width: 48rem) 33rem, 100vw"
           alt=""
           width={image.width}
           height={image.height}

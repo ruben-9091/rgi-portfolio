@@ -71,6 +71,10 @@ export function ProjectPage() {
         <img
           className={styles.cover}
           src={project.image.src}
+          srcSet={project.image.sources
+            .map((source) => `${source.src} ${source.width}w`)
+            .join(', ')}
+          sizes="(min-width: 72rem) 63rem, 100vw"
           alt={project.image.alt}
           width={project.image.width}
           height={project.image.height}
