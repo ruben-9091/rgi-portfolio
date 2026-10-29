@@ -5,11 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#faf6f6" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content="Ruben Gómez Ibáñez" />
     <meta
       name="description"
       content="Portfolio de Ruben Gómez Ibáñez, desarrollador Front-End con base en retail y dirección de equipo. Proyectos, experiencia y contacto."
     />
-    <title>Ruben Gómez Ibáñez · Front-End</title>
+    <title>Ruben Gómez Ibáñez · Desarrollador Front-End</title>
+
+    <!--
+      Open Graph. Las URLs absolutas salen de VITE_SITE_URL en el build; si la
+      variable no está definida, el plugin de vite.config.ts elimina esas líneas
+      para no publicar rutas relativas que los crawlers ignoran.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ruben Gómez Ibáñez" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:title"
+      content="Ruben Gómez Ibáñez · Desarrollador Front-End"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio de Ruben Gómez Ibáñez, desarrollador Front-End con base en retail y dirección de equipo. Proyectos, experiencia y contacto."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Ruben Gómez Ibáñez, desarrollador Front-End"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ruben Gómez Ibáñez",
+        "jobTitle": "Desarrollador Front-End",
+        "email": "mailto:ruben_9091@hotmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Alicante",
+          "addressCountry": "ES"
+        },
+        "sameAs": [
+          "https://github.com/ruben-9091",
+          "https://www.linkedin.com/in/ruben-gomez-dev"
+        ],
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Node.js"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,6 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import { Button } from '../components/Button/Button'
+import { profile } from '../data/profile'
 import { projects } from '../data/projects'
+import { absoluteUrl, hasSiteUrl } from '../lib/site'
 import { NotFoundPage } from './NotFoundPage'
 import styles from './ProjectPage.module.css'
 
@@ -13,6 +15,17 @@ export function ProjectPage() {
   }
 
   const otherProjects = projects.filter((item) => item.slug !== project.slug)
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.name,
+    description: project.description,
+    about: project.stack,
+    author: { '@type': 'Person', name: profile.name },
+    ...(project.demo ? { url: project.demo } : {}),
+    ...(hasSiteUrl ? { mainEntityOfPage: absoluteUrl(`/proyectos/${project.slug}`) } : {}),
+  }
 
   return (
     <article className={styles.page} aria-labelledby="project-title">
@@ -105,6 +118,13 @@ export function ProjectPage() {
             ))}
           </ul>
         </nav>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
       </div>
     </article>
   )
