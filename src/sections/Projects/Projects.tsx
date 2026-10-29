@@ -8,7 +8,7 @@ export function Projects() {
     <Section
       id="proyectos"
       eyebrow="Proyectos"
-      title="Cuatro proyectos para enseñar lo que sé hacer"
+      title="Explora las soluciones que he desarrollado hasta la fecha y descubre los nuevos proyectos y desafíos en los que estoy trabajando."
       lead="De una app full-stack a un juego en canvas: qué problema resolvía cada uno, qué hice yo y qué aprendí."
     >
       <ul className={styles.grid}>
