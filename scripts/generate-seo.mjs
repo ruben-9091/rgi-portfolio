@@ -30,9 +30,33 @@ const fileEnv = {
   ...readEnvFile(path.join(root, '.env.production.local')),
 }
 
-const siteUrl = (process.env.VITE_SITE_URL || fileEnv.VITE_SITE_URL || '')
-  .replace(/\/+$/, '')
-  .trim()
+const SITE_URL_PATTERN = /^https?:\/\/[^\s/]+\/?$/
+
+/**
+ * Misma limpieza que en vite.config.ts: acepta [url](url) y <url> porque es lo
+ * que se cuela al copiar el dominio, y rechaza cualquier otra cosa. Repetida
+ * aquí porque este script corre en un proceso de Node aparte.
+ */
+function normalizeSiteUrl(raw) {
+  const trimmed = (raw ?? '').trim().replace(/^<(.*)>$/, '$1')
+  const markdown = /^\[([^\]]+)\]\([^)]*\)$/.exec(trimmed)
+  const value = (markdown?.[1] ?? trimmed).trim()
+
+  if (!value) return ''
+
+  if (!SITE_URL_PATTERN.test(value)) {
+    console.error(
+      `[seo] VITE_SITE_URL no es un dominio válido ("${raw}"). Escribe solo el origen, por ejemplo: https://tu-dominio.com`,
+    )
+    process.exit(1)
+  }
+
+  return value.replace(/\/+$/, '')
+}
+
+const siteUrl = normalizeSiteUrl(
+  process.env.VITE_SITE_URL || fileEnv.VITE_SITE_URL || '',
+)
 
 if (!siteUrl) {
   console.warn(

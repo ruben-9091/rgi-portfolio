@@ -68,6 +68,8 @@ Desplegado en Vercel y conectado a `main`: cada push publica en producción.
 
 `VITE_SITE_URL` no es opcional en producción: sin ella el build omite `sitemap.xml`, `robots.txt`, la canónica y el Open Graph absoluto. Cambiarla no relanza el build por sí sola, hace falta un redeploy.
 
+El valor tiene que ser el origen pelado, sin barra final ni ruta. El build tolera el formato de enlace que se cuela al copiar (`[url](url)`) porque invalida igualmente el `canonical` y el sitemap, y falla con un mensaje claro si lo que llega no es un dominio.
+
 `vercel.json` define el rewrite de SPA (para que `/proyectos/:slug` funcione al refrescar), la caché inmutable de `/assets/*` y cabeceras de seguridad básicas.
 
 ## Hoja de ruta
