@@ -4,6 +4,8 @@ Web personal de **Ruben Gómez Ibáñez**, desarrollador Front-End con once año
 
 El objetivo es doble: que un reclutador entienda mi perfil en menos de un minuto y que el código sirva como muestra real de cómo trabajo.
 
+**En producción:** <https://rgi-portfolio.vercel.app>
+
 ## Stack
 
 - **React 19** + **Vite 8**
@@ -13,21 +15,24 @@ El objetivo es doble: que un reclutador entienda mi perfil en menos de un minuto
 
 ## Estructura
 
+Este repositorio **es** la aplicación: la raíz contiene el proyecto de Vite.
+
 ```
-my-web/
-├── web/                 # Aplicación React + Vite
-│   ├── src/
-│   │   ├── components/  # Piezas reutilizables (Header, Button, ProjectCard...)
-│   │   ├── sections/    # Secciones de la página de inicio
-│   │   ├── pages/       # Vistas con ruta propia
-│   │   ├── hooks/       # usePageMeta: metadatos del <head> por ruta
-│   │   ├── lib/         # pageMeta y configuración del sitio
-│   │   ├── data/        # Contenido tipado (perfil, proyectos, experiencia)
-│   │   ├── styles/      # Tokens de diseño y estilos globales
-│   │   └── assets/      # Foto y portadas de proyectos
-│   ├── public/          # Favicon, og.png y CV descargable
-│   └── scripts/         # generate-seo.mjs: sitemap y robots en el build
-└── api/                 # Reservado para un futuro backend (ver api/README.md)
+.
+├── src/
+│   ├── components/  # Piezas reutilizables (Header, Button, ProjectCard...)
+│   ├── sections/    # Secciones de la página de inicio
+│   ├── pages/       # Vistas con ruta propia
+│   ├── hooks/       # usePageMeta: metadatos del <head> por ruta
+│   ├── lib/         # pageMeta y configuración del sitio
+│   ├── data/        # Contenido tipado (perfil, proyectos, experiencia)
+│   ├── styles/      # Tokens de diseño y estilos globales
+│   └── assets/      # Foto y portadas de proyectos
+├── public/          # Favicon, og.png y CV descargable
+├── scripts/         # generate-seo.mjs: sitemap y robots en el build
+├── api/             # Reservado para un futuro backend (ver api/README.md)
+├── index.html
+└── vercel.json
 ```
 
 ## Cómo arrancar
@@ -35,7 +40,6 @@ my-web/
 Requisitos: Node 20.19+ (probado con Node 24).
 
 ```bash
-cd web
 npm install
 npm run dev
 ```
@@ -51,8 +55,20 @@ npm run lint     # analiza el código con ESLint
 Para que el build publique `canonical`, Open Graph absoluto, `sitemap.xml` y `robots.txt` hace falta el dominio. Cópialo de `.env.example` a `.env`:
 
 ```bash
-VITE_SITE_URL=https://tu-dominio.com
+VITE_SITE_URL=https://rgi-portfolio.vercel.app
 ```
+
+## Despliegue
+
+Desplegado en Vercel y conectado a `main`: cada push publica en producción.
+
+- **Root Directory**: vacío. La raíz del repositorio ya es la app; no hay subcarpeta que seleccionar.
+- **Framework**: Vite · **Build**: `npm run build` · **Output**: `dist`.
+- **Variable de entorno** (solo Production): `VITE_SITE_URL=https://rgi-portfolio.vercel.app`.
+
+`VITE_SITE_URL` no es opcional en producción: sin ella el build omite `sitemap.xml`, `robots.txt`, la canónica y el Open Graph absoluto. Cambiarla no relanza el build por sí sola, hace falta un redeploy.
+
+`vercel.json` define el rewrite de SPA (para que `/proyectos/:slug` funcione al refrescar), la caché inmutable de `/assets/*` y cabeceras de seguridad básicas.
 
 ## Hoja de ruta
 
@@ -60,18 +76,18 @@ VITE_SITE_URL=https://tu-dominio.com
 - [x] **Fase 1** — esqueleto de todas las secciones, navegación y responsive
 - [x] **Fase 2** — contenido definitivo, capturas de proyectos y CV
 - [x] **Fase 3** — accesibilidad, rendimiento y SEO
-- [ ] **Fase 4** — despliegue en Vercel y enlaces desde LinkedIn y GitHub
+- [ ] **Fase 4** — despliegue en Vercel y enlaces desde LinkedIn y GitHub (desplegado; pendiente la verificación final y los enlaces)
 
 ## Contenido
 
-- El CV descargable vive en `web/public/cv/ruben-gomez-cv.pdf`.
+- El CV descargable vive en `public/cv/ruben-gomez-cv.pdf`.
 - Cada proyecto tiene una ficha en `/proyectos/:slug` con su portada, stack, aportación y aprendizajes.
-- Los enlaces de demo y repositorio se definen en `web/src/data/projects.ts`. Si un proyecto no tiene URL pública, el enlace no aparece.
-- Las portadas están en `web/src/assets/projects/` en WebP, con variantes de 480 y 800 px para el `srcSet`.
+- Los enlaces de demo y repositorio se definen en `src/data/projects.ts`. Si un proyecto no tiene URL pública, el enlace no aparece.
+- Las portadas están en `src/assets/projects/` en WebP, con variantes de 480 y 800 px para el `srcSet`.
 
 ## SEO
 
-- `web/src/lib/pageMeta.ts` define título, descripción y canónica de cada ruta. `usePageMeta` los escribe en el `<head>` al navegar, y `index.html` guarda una copia estática como respaldo para los crawlers que no ejecutan JavaScript.
+- `src/lib/pageMeta.ts` define título, descripción y canónica de cada ruta. `usePageMeta` los escribe en el `<head>` al navegar, y `index.html` guarda una copia estática como respaldo para los crawlers que no ejecutan JavaScript.
 - `index.html` incluye Open Graph, Twitter Cards y JSON-LD de `Person`; cada ficha añade un `CreativeWork`.
 - `public/og.png` (1200×630) es la imagen que se ve al compartir el enlace. Está generada con la paleta del sitio, no depende del dominio.
 - `scripts/generate-seo.mjs` escribe `sitemap.xml` y `robots.txt` al final del build leyendo los slugs de `projects.ts`. Si `VITE_SITE_URL` falta o apunta a local, no genera nada y avisa: un sitemap con el dominio equivocado tarda semanas en corregirse.
@@ -96,8 +112,8 @@ VITE_SITE_URL=https://tu-dominio.com
 
 ## Decisiones de diseño
 
-- El color, la tipografía y el espaciado viven en `web/src/styles/tokens.css`. El modo oscuro se añadirá después como un segundo conjunto de tokens, sin tocar los componentes.
+- El color, la tipografía y el espaciado viven en `src/styles/tokens.css`. El modo oscuro se añadirá después como un segundo conjunto de tokens, sin tocar los componentes.
 - La paleta base es vino, negro cálido y blanco rosado, con el foco en el mismo vino del acento. Se eligió tras descartar el azul cobalto y una variante beige.
 - Una sola página de inicio con todas las secciones, más una página de detalle por proyecto.
-- El contenido se escribe en archivos TypeScript dentro de `web/src/data/`. Si falta un campo, el editor avisa.
+- El contenido se escribe en archivos TypeScript dentro de `src/data/`. Si falta un campo, el editor avisa.
 - Las portadas se generaron a partir de capturas reales y materiales de cada proyecto, y se sirven en WebP para no cargar imágenes de más.
