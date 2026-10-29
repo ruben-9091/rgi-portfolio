@@ -56,9 +56,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
               href={demo}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label={`Ver la demo de ${name} en una pestaña nueva`}
             >
               Ver demo
+              <span className="sr-only">
+                {' '}
+                de {name} (se abre en una pestaña nueva)
+              </span>
             </a>
           ) : null}
           {repo ? (
@@ -67,9 +70,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
               href={repo}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label={`Ver el código de ${name} en GitHub, en una pestaña nueva`}
             >
               Código
+              <span className="sr-only">
+                {' '}
+                de {name} en GitHub (se abre en una pestaña nueva)
+              </span>
             </a>
           ) : null}
         </div>

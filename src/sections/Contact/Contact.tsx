@@ -33,10 +33,10 @@ export function Contact() {
               href={profile.github}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Perfil de GitHub de Ruben Gómez, en una pestaña nueva"
             >
               <span className={styles.label}>GitHub</span>
               <span className={styles.value}>github.com/ruben-9091</span>
+              <span className="sr-only"> (se abre en una pestaña nueva)</span>
             </a>
           </li>
           <li>
@@ -45,10 +45,10 @@ export function Contact() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Perfil de LinkedIn de Ruben Gómez, en una pestaña nueva"
             >
               <span className={styles.label}>LinkedIn</span>
               <span className={styles.value}>linkedin.com/in/ruben-gomez-dev</span>
+              <span className="sr-only"> (se abre en una pestaña nueva)</span>
             </a>
           </li>
         </ul>
