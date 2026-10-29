@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { navItems, profile } from '../../data/profile'
 import styles from './Header.module.css'
 
 export function Header() {
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const { pathname } = useLocation()
+  /* En una ficha de proyecto, "Proyectos" es la sección de la que cuelga */
+  const onProjectPage = pathname.startsWith('/proyectos/')
 
   useEffect(() => {
     if (!open) return
@@ -62,6 +65,9 @@ export function Header() {
                   className={styles.link}
                   to={`/#${item.id}`}
                   onClick={closeMenu}
+                  aria-current={
+                    onProjectPage && item.id === 'proyectos' ? 'true' : undefined
+                  }
                 >
                   {item.label}
                 </Link>
