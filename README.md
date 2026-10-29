@@ -63,7 +63,7 @@ npm run lint     # analiza el código con ESLint
 ## Decisiones de diseño
 
 - El color, la tipografía y el espaciado viven en `web/src/styles/tokens.css`. El modo oscuro se añadirá después como un segundo conjunto de tokens, sin tocar los componentes.
-- La paleta base es azul cobalto, negro azulado y blanco frío, con el foco en azul claro. Se eligió tras probar una variante beige.
+- La paleta base es vino, negro cálido y blanco rosado, con el foco en el mismo vino del acento. Se eligió tras descartar el azul cobalto y una variante beige.
 - Una sola página de inicio con todas las secciones, más una página de detalle por proyecto.
 - El contenido se escribe en archivos TypeScript dentro de `web/src/data/`. Si falta un campo, el editor avisa.
 - Las portadas se generaron a partir de capturas reales y materiales de cada proyecto, y se sirven en WebP para no cargar imágenes de más.

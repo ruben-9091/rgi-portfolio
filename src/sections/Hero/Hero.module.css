@@ -53,7 +53,7 @@
   height: 0.5rem;
   margin-top: 0.55em;
   border-radius: var(--radius-full);
-  background-color: #2f8f5b;
+  background-color: var(--color-success);
 }
 
 .actions {

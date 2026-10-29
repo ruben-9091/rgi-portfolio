@@ -8,17 +8,19 @@
 
 :root {
   /* Color · base clara */
-  --color-bg: #f7f9fc;
+  --color-bg: #faf6f6;
   --color-surface: #ffffff;
-  --color-surface-muted: #edf2f9;
-  --color-ink: #0b1220;
-  --color-ink-soft: #334155;
-  --color-ink-muted: #64748b;
-  --color-border: #dbe3ee;
-  --color-accent: #1d4ed8;
-  --color-accent-strong: #1e40af;
-  --color-accent-soft: #e3ecff;
-  --color-focus: #0ea5e9;
+  --color-surface-muted: #f5edee;
+  --color-ink: #1a1416;
+  --color-ink-soft: #4a3f43;
+  --color-ink-muted: #6f6066;
+  --color-border: #e8dcdd;
+  --color-accent: #9f1239;
+  --color-accent-strong: #881337;
+  --color-accent-soft: #f9dbe5;
+  --color-focus: #9f1239;
+  --color-on-accent: #ffffff;
+  --color-success: #2f7d52;
 
   /* Tipografía */
   --font-sans:
