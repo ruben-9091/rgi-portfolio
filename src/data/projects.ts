@@ -93,6 +93,8 @@ export const projects: Project[] = [
       ],
       alt: 'Portada de React Assemble, proyecto de grupo sobre Marvel.',
     },
+    repo: 'https://github.com/MonforGomez/react-assemble',
+    demo: 'https://react-assemble.netlify.app',
   },
   {
     slug: 'ironheroes',
