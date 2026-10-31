@@ -78,7 +78,10 @@ El valor tiene que ser el origen pelado, sin barra final ni ruta. El build toler
 - [x] **Fase 1** — esqueleto de todas las secciones, navegación y responsive
 - [x] **Fase 2** — contenido definitivo, capturas de proyectos y CV
 - [x] **Fase 3** — accesibilidad, rendimiento y SEO
-- [ ] **Fase 4** — despliegue en Vercel y enlaces desde LinkedIn y GitHub (desplegado; pendiente la verificación final y los enlaces)
+- [x] **Fase 4** — despliegue en Vercel y enlaces desde LinkedIn y GitHub
+  - Desplegado y verificado el 31/10/2026: producción sirve el último commit de `main`; `sitemap.xml`, `robots.txt`, canónica y Open Graph responden con el dominio correcto.
+  - React Assemble enlaza su demo y su repositorio público; IronHeroes se queda sin enlaces porque no tiene URL pública.
+  - Los enlaces desde LinkedIn y GitHub son manuales: sitio web en el perfil, repositorio fijado y README de perfil.
 
 ## Contenido
 
