@@ -7,14 +7,13 @@ import type { ExperienceItem } from './types'
 export const experience: ExperienceItem[] = [
   {
     id: 'el-corte-ingles',
-    role: 'Responsable de planta',
+    role: 'Responsable',
     organisation: 'El Corte Inglés',
     period: 'Once años',
     kind: 'Trabajo',
-    summary: 'Pasé de vender en planta a coordinar al equipo.',
+    summary: 'Pasé de vender en planta a coordinacion y gestion de incidencias.',
     highlights: [
-      'Coordinaba horarios, vacaciones e incidencias de 16 personas repartidas en dos turnos.',
-      'Cuatro años seguidos fui la persona con más ventas de mi planta.',
+      'Coordinaba incidencias y gestiones en del entorno de trabajo.',
       'Reconocimientos internos por mi trabajo y por mi compañerismo.',
     ],
   },
