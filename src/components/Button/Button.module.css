@@ -28,7 +28,7 @@
 }
 
 .primary:hover {
-  background-color: var(--color-accent-strong);
+  background-color: var(--color-accent-hover);
 }
 
 .secondary {
@@ -38,5 +38,6 @@
 }
 
 .secondary:hover {
-  border-color: var(--color-ink-muted);
+  border-color: var(--color-ink);
+  background-color: var(--color-accent-soft);
 }

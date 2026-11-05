@@ -7,19 +7,20 @@
  */
 
 :root {
-  /* Color · base clara */
-  --color-bg: #faf6f6;
-  --color-surface: #ffffff;
-  --color-surface-muted: #f5edee;
-  --color-ink: #1a1416;
-  --color-ink-soft: #4a3f43;
-  --color-ink-muted: #6f6066;
-  --color-border: #e8dcdd;
-  --color-accent: #9f1239;
-  --color-accent-strong: #881337;
-  --color-accent-soft: #f9dbe5;
-  --color-focus: #9f1239;
-  --color-on-accent: #ffffff;
+  /* Color · grises, trazas negras y lima */
+  --color-bg: #e8e8e3;
+  --color-surface: #f4f4ef;
+  --color-surface-muted: #dcdcd4;
+  --color-ink: #0b0b0a;
+  --color-ink-soft: #30302b;
+  --color-ink-muted: #62625a;
+  --color-border: #16160f;
+  --color-accent: #c8f52c;
+  --color-accent-strong: #3f620c;
+  --color-accent-hover: #b2dc16;
+  --color-accent-soft: #e7fab2;
+  --color-focus: #0b0b0a;
+  --color-on-accent: #0b0b0a;
   --color-success: #2f7d52;
 
   /* Tipografía */
@@ -67,8 +68,8 @@
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 2px rgb(20 23 28 / 6%), 0 4px 12px rgb(20 23 28 / 4%);
-  --shadow-md: 0 12px 32px rgb(20 23 28 / 10%);
+  --shadow-sm: 0 1px 2px rgb(11 11 10 / 8%), 0 4px 12px rgb(11 11 10 / 6%);
+  --shadow-md: 0 14px 34px rgb(11 11 10 / 16%);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 120ms;
   --duration-base: 200ms;
