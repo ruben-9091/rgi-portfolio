@@ -8,8 +8,8 @@ export const profile: Profile = {
   role: 'Desarrollador Front-End',
   location: 'Alicante, España',
   tagline:
-    'Vengo del retail, donde aprendí a escuchar, vender y coordinar equipos. Ahora construyo interfaces con React y TypeScript.',
-  availability: 'Abierto a puestos Front-End y a un contrato en prácticas full-stack.',
+    'Vengo del retail, donde aprendí a escuchar, vender y coordinar equipos. Ahora construyo interfaces con React, JavaScript y TypeScript.',
+  availability: 'Abierto a puestos Full-Stack, asi como puestos en Front-End o Back-End.',
   email: 'ruben_9091@hotmail.com',
   github: 'https://github.com/ruben-9091',
   linkedin: 'https://www.linkedin.com/in/ruben-gomez-dev',
