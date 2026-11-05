@@ -72,7 +72,7 @@
 .photoFrame {
   position: relative;
   isolation: isolate;
-  max-width: 30rem;
+  max-width: 15rem;
   width: 100%;
   justify-self: center;
 }
