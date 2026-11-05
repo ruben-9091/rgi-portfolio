@@ -7,21 +7,27 @@
  */
 
 :root {
-  /* Color · grises, trazas negras y lima */
-  --color-bg: #e8e8e3;
-  --color-surface: #f4f4ef;
-  --color-surface-muted: #dcdcd4;
-  --color-ink: #0b0b0a;
-  --color-ink-soft: #30302b;
-  --color-ink-muted: #62625a;
-  --color-border: #16160f;
+  /* Color · grises, negro y lima solo para líneas */
+  --color-bg: #d8d8d2;
+  --color-surface: #e6e6e0;
+  --color-surface-muted: #c9c9c2;
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #2b2b27;
+  --color-ink-muted: #5f5f57;
+  --color-line: #9dc400;
+  --color-border: var(--color-line);
   --color-accent: #c8f52c;
-  --color-accent-strong: #3f620c;
-  --color-accent-hover: #b2dc16;
-  --color-accent-soft: #e7fab2;
-  --color-focus: #0b0b0a;
-  --color-on-accent: #0b0b0a;
-  --color-success: #2f7d52;
+  --color-accent-strong: var(--color-ink);
+  --color-focus: var(--color-ink);
+
+  /* Bloques oscuros */
+  --color-dark: #111110;
+  --color-dark-surface: #1b1b18;
+  --color-dark-muted: #262622;
+  --color-on-dark: #f2f2ec;
+  --color-on-dark-soft: #c9c9c1;
+  --color-on-dark-muted: #9b9b93;
+  --color-line-bright: #c8f52c;
 
   /* Tipografía */
   --font-sans:
@@ -68,8 +74,8 @@
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 2px rgb(11 11 10 / 8%), 0 4px 12px rgb(11 11 10 / 6%);
-  --shadow-md: 0 14px 34px rgb(11 11 10 / 16%);
+  --shadow-sm: 0 1px 2px rgb(10 10 10 / 10%), 0 6px 18px rgb(10 10 10 / 8%);
+  --shadow-md: 0 18px 40px rgb(10 10 10 / 20%);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 120ms;
   --duration-base: 200ms;

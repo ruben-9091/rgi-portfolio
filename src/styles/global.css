@@ -70,8 +70,8 @@ select {
 }
 
 ::selection {
-  background-color: var(--color-accent-soft);
-  color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-accent);
 }
 
 .container {

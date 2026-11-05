@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);
-  border-bottom: 1px solid var(--color-border);
-  backdrop-filter: blur(12px);
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-line-bright);
+  --color-focus: var(--color-line-bright);
 }
 
 .inner {
@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  color: var(--color-ink);
+  color: var(--color-on-dark);
   font-size: var(--text-sm);
   font-weight: 650;
   text-decoration: none;
@@ -30,9 +30,10 @@
   place-items: center;
   width: 2.25rem;
   height: 2.25rem;
+  border: 1px solid var(--color-line-bright);
   border-radius: var(--radius-sm);
-  background-color: var(--color-ink);
-  color: var(--color-bg);
+  background-color: transparent;
+  color: var(--color-on-dark);
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
@@ -58,10 +59,10 @@
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-line-bright);
   border-radius: var(--radius-sm);
-  background-color: var(--color-surface);
-  color: var(--color-ink);
+  background-color: transparent;
+  color: var(--color-on-dark);
   cursor: pointer;
 }
 
@@ -95,9 +96,9 @@
   left: 0;
   display: none;
   padding: var(--space-3) var(--gutter) var(--space-5);
-  border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-bg);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-line-bright);
+  background-color: var(--color-dark);
+  box-shadow: 0 18px 40px rgb(0 0 0 / 35%);
 }
 
 .nav[data-open='true'] {
@@ -115,18 +116,25 @@
 .link {
   display: block;
   padding: var(--space-3) 0;
-  color: var(--color-ink-soft);
+  color: var(--color-on-dark-soft);
   font-size: var(--text-base);
   text-decoration: none;
+  text-underline-offset: 0.35em;
   transition: color var(--duration-fast) var(--ease-out);
 }
 
 .link:hover {
-  color: var(--color-accent-strong);
+  color: var(--color-on-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line-bright);
+  text-decoration-thickness: 1px;
 }
 
 .link[aria-current] {
-  color: var(--color-accent-strong);
+  color: var(--color-on-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line-bright);
+  text-decoration-thickness: 2px;
 }
 
 @media (min-width: 52rem) {

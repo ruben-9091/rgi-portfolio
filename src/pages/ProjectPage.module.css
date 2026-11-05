@@ -5,14 +5,17 @@
 .back {
   display: inline-block;
   margin-bottom: var(--space-5);
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-size: var(--text-sm);
   font-weight: 600;
   text-decoration: none;
+  text-underline-offset: 0.3em;
 }
 
 .back:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-decoration-thickness: 2px;
 }
 
 .header {
@@ -22,7 +25,7 @@
 }
 
 .eyebrow {
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
@@ -106,7 +109,7 @@
 }
 
 .list li::marker {
-  color: var(--color-accent);
+  color: var(--color-border);
 }
 
 .more {
@@ -129,11 +132,14 @@
 }
 
 .moreList a {
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-weight: 550;
   text-decoration: none;
+  text-underline-offset: 0.3em;
 }
 
 .moreList a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-decoration-thickness: 2px;
 }

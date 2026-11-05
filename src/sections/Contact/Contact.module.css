@@ -29,7 +29,7 @@
 
 .item:hover .value {
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--color-border);
   text-decoration-thickness: 2px;
 }
 
@@ -42,6 +42,6 @@
 }
 
 .value {
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-weight: 550;
 }

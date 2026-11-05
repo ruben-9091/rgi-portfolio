@@ -1,4 +1,13 @@
 .card {
+  --color-surface: var(--color-dark-surface);
+  --color-surface-muted: var(--color-dark-muted);
+  --color-ink: var(--color-on-dark);
+  --color-ink-soft: var(--color-on-dark-soft);
+  --color-ink-muted: var(--color-on-dark-muted);
+  --color-border: var(--color-line-bright);
+  --color-accent-strong: var(--color-on-dark);
+  --color-focus: var(--color-line-bright);
+
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,6 +15,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
+  color: var(--color-ink);
   box-shadow: var(--shadow-sm);
   transition:
     border-color var(--duration-base) var(--ease-out),
@@ -14,7 +24,7 @@
 }
 
 .card:hover {
-  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  border-color: var(--color-accent);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
@@ -47,7 +57,7 @@
 }
 
 .role {
-  color: var(--color-accent-strong);
+  color: var(--color-on-dark-muted);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.02em;
@@ -63,7 +73,7 @@
 
 .titleLink:hover {
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--color-line-bright);
   text-decoration-thickness: 2px;
 }
 
@@ -96,18 +106,22 @@
   gap: var(--space-4);
   margin-top: var(--space-3);
   padding-top: var(--space-3);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid
+    color-mix(in srgb, var(--color-line-bright) 45%, transparent);
 }
 
 .link {
-  color: var(--color-accent-strong);
+  color: var(--color-on-dark);
   font-size: var(--text-sm);
   font-weight: 600;
   text-decoration: none;
+  text-underline-offset: 0.3em;
 }
 
 .link:hover {
   text-decoration: underline;
+  text-decoration-color: var(--color-line-bright);
+  text-decoration-thickness: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,10 +1,5 @@
 .hero {
   padding-block: clamp(2.5rem, 6vw, 5rem) var(--section-y);
-  background-image: radial-gradient(
-    circle at 15% 0%,
-    var(--color-accent-soft),
-    transparent 55%
-  );
 }
 
 .grid {
@@ -20,11 +15,21 @@
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   color: var(--color-accent-strong);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 1.75rem;
+  height: 1px;
+  background-color: var(--color-border);
 }
 
 .title {
@@ -53,7 +58,8 @@
   height: 0.5rem;
   margin-top: 0.55em;
   border-radius: var(--radius-full);
-  background-color: var(--color-success);
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-ink);
 }
 
 .actions {
@@ -79,8 +85,9 @@
   z-index: -1;
   width: 55%;
   height: 45%;
+  border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  background-color: var(--color-accent-soft);
+  background-color: var(--color-ink);
 }
 
 .photo {

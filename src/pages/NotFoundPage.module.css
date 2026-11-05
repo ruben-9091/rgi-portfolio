@@ -13,7 +13,7 @@
 }
 
 .eyebrow {
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wide);
@@ -29,6 +29,12 @@
 }
 
 .link {
-  color: var(--color-accent-strong);
+  color: var(--color-ink);
   font-weight: 600;
+  text-underline-offset: 0.3em;
+}
+
+.link:hover {
+  text-decoration-color: var(--color-border);
+  text-decoration-thickness: 2px;
 }

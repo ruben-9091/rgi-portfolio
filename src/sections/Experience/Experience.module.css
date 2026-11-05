@@ -44,9 +44,10 @@
 
 .badge {
   padding: 0.15rem 0.55rem;
+  border: 1px solid var(--color-line-bright);
   border-radius: var(--radius-full);
-  background-color: var(--color-accent-soft);
-  color: var(--color-accent-strong);
+  background-color: transparent;
+  color: var(--color-on-dark);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.04em;
@@ -87,7 +88,7 @@
 }
 
 .highlights li::marker {
-  color: var(--color-accent);
+  color: var(--color-line-bright);
 }
 
 @media (min-width: 56rem) {

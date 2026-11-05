@@ -1,7 +1,9 @@
 .footer {
   padding-block: var(--space-7);
-  border-top: 1px solid var(--color-border);
-  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-line-bright);
+  background-color: var(--color-dark);
+  color: var(--color-on-dark);
+  --color-focus: var(--color-line-bright);
 }
 
 .inner {
@@ -20,7 +22,7 @@
 
 .meta,
 .note {
-  color: var(--color-ink-muted);
+  color: var(--color-on-dark-muted);
   font-size: var(--text-sm);
 }
 
@@ -34,15 +36,18 @@
 }
 
 .link {
-  color: var(--color-ink-soft);
+  color: var(--color-on-dark-soft);
   font-size: var(--text-sm);
   text-decoration: none;
+  text-underline-offset: 0.3em;
   transition: color var(--duration-fast) var(--ease-out);
 }
 
 .link:hover {
-  color: var(--color-accent-strong);
+  color: var(--color-on-dark);
   text-decoration: underline;
+  text-decoration-color: var(--color-line-bright);
+  text-decoration-thickness: 2px;
 }
 
 @media (min-width: 48rem) {
@@ -54,6 +59,7 @@
   .note {
     grid-column: 1 / -1;
     padding-top: var(--space-5);
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid
+      color-mix(in srgb, var(--color-line-bright) 40%, transparent);
   }
 }

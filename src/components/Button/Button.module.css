@@ -23,21 +23,24 @@
 }
 
 .primary {
-  background-color: var(--color-accent);
-  color: var(--color-on-accent);
+  border-color: var(--color-border);
+  background-color: var(--color-dark-surface);
+  color: var(--color-on-dark);
 }
 
 .primary:hover {
-  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent);
+  background-color: var(--color-ink);
 }
 
 .secondary {
-  background-color: var(--color-surface);
+  background-color: var(--color-surface-muted);
   border-color: var(--color-border);
   color: var(--color-ink);
 }
 
 .secondary:hover {
-  border-color: var(--color-ink);
-  background-color: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  background-color: var(--color-ink);
+  color: var(--color-on-dark);
 }
