@@ -1,4 +1,5 @@
 import { Button } from '../../components/Button/Button'
+import { WebThreadsBackground } from '../../components/WebThreadsBackground/WebThreadsBackground'
 import { profile } from '../../data/profile'
 import styles from './Hero.module.css'
 
@@ -9,6 +10,7 @@ export function Hero() {
 
   return (
     <section className={styles.hero} aria-labelledby="inicio-title">
+      <WebThreadsBackground />
       <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
           <p className={styles.eyebrow}>

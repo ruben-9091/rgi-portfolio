@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { WebThreadsBackground } from '../WebThreadsBackground/WebThreadsBackground'
 import styles from './Section.module.css'
 
 type SectionProps = {
@@ -33,7 +34,8 @@ export function Section({
       className={sectionClassName}
       aria-labelledby={`${id}-title`}
     >
-      <div className="container">
+      <WebThreadsBackground tone={tone} />
+      <div className={`container ${styles.body}`}>
         <div className={innerClassName}>
           <header className={styles.heading}>
             <p className={styles.eyebrow}>{eyebrow}</p>

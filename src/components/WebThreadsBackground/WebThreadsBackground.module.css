@@ -1,0 +1,22 @@
+/*
+ * Capa decorativa del fondo animado. Vive dentro de cada sección, por debajo
+ * del contenido y sin capturar eventos: el canvas escucha el puntero desde
+ * `window`, así que los efectos de hover y clic siguen funcionando.
+ */
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/*
+ * En pantallas pequeñas el mismo trazado se vuelve más denso. Bajamos el
+ * contraste para que el texto siga mandando sobre el fondo.
+ */
+@media (max-width: 40rem) {
+  .layer {
+    opacity: 0.7;
+  }
+}

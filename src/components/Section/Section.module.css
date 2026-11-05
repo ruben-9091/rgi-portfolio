@@ -1,6 +1,14 @@
 .section {
+  position: relative;
+  isolation: isolate;
   padding-block: var(--section-y);
   scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+/* Contenido por encima de la capa decorativa del fondo animado. */
+.body {
+  position: relative;
+  z-index: 1;
 }
 
 .muted {
