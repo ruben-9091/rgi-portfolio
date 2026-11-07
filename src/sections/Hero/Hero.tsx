@@ -1,4 +1,5 @@
 import { Button } from '../../components/Button/Button'
+import TechText from '../../components/TechText/TechText'
 import { WebThreadsBackground } from '../../components/WebThreadsBackground/WebThreadsBackground'
 import { profile } from '../../data/profile'
 import styles from './Hero.module.css'
@@ -17,7 +18,22 @@ export function Hero() {
             {profile.role} · {profile.location}
           </p>
           <h1 id="inicio-title" className={styles.title}>
-            {profile.name}
+            <span className="sr-only">{profile.name}</span>
+            <span className={styles.wordmark} aria-hidden="true">
+              <TechText
+                text={profile.name}
+                fontWeight={700}
+                fontSize={120}
+                letterSpacing={-0.04}
+                align="left"
+                reveal="letter"
+                specks={12}
+                intro="type"
+                introDuration={1.6}
+                labels={false}
+                guides={false}
+              />
+            </span>
           </h1>
           <p className={styles.tagline}>{profile.tagline}</p>
           <p className={styles.availability}>

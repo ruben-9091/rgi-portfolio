@@ -37,7 +37,19 @@
 }
 
 .title {
-  font-size: var(--text-3xl);
+  width: 100%;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.wordmark {
+  display: block;
+  width: 100%;
+  height: clamp(3.5rem, 2rem + 4vw, 4.5rem);
+  /* Compensa el 5% de margen interno que TechText deja a la izquierda, para
+     que el nombre quede alineado con el eyebrow y el resto del contenido. */
+  transform: translateX(-5%);
 }
 
 .tagline {
